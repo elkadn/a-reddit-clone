@@ -36,7 +36,7 @@ pipeline {
 
         stage("Sonarqube Analysis") {
             steps {
-                withSonarQubeEnv('SonarQube-Server') {
+                withSonarQubeEnv('sonarQube-Server') {
                     sh '''
                     $SCANNER_HOME/bin/sonar-scanner \
                     -Dsonar.projectName=Reddit-Clone-CLI \
