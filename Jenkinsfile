@@ -93,7 +93,8 @@ pipeline {
                  }
              }
          }
-         post {
+    }
+    post {
         always {
            emailext attachLog: true,
                subject: "'${currentBuild.result}'",
@@ -104,5 +105,4 @@ pipeline {
                attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
         }
      }
-    }
 }
